@@ -26,7 +26,6 @@ public class App
 		System.out.println(tetriminoDAO.listePieces());
 		
 		
-		
 		myContext.close();
     }
 }

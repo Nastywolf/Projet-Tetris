@@ -15,38 +15,27 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
-@Table(name="faq")
+@Table(name = "faq")
 @Cacheable
-@Cache(usage=CacheConcurrencyStrategy.READ_ONLY)
-public class Faq implements Serializable{
-	
+@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
+public class Faq implements Serializable {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="FAQ_ID")
+	@Column(name = "FAQ_ID")
 	private int id;
-	
-	@Column(name="FAQ_QUESTION")
+
+	@Column(name = "FAQ_QUESTION")
 	private String question;
-	
-	@Column(name="FAQ_REPONSE")
+
+	@Column(name = "FAQ_REPONSE")
 	private String reponse;
 
 	public Faq() {
 	}
 
-	public Faq(int id, String question, String reponse) {
-		super();
-		this.id = id;
-		this.question = question;
-		this.reponse = reponse;
-	}
-
 	public int getId() {
 		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getQuestion() {

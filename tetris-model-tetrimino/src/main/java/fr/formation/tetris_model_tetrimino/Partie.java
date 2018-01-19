@@ -35,16 +35,11 @@ public class Partie implements Serializable {
 	private Authentification joueur;
 
 	@Column(name = "PARTIE_DATE")
-	@NotEmpty
+	//@NotEmpty
 	private Date date;
 
 	@Column(name = "PARTIE_SCORE")
 	private int score = 0;
-
-	public Partie(Authentification joueur, Date date) {
-		this.joueur = joueur;
-		this.date = date;
-	}
 
 	public Authentification getJoueur() {
 		return joueur;

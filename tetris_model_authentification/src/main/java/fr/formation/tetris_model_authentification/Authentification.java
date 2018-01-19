@@ -26,25 +26,19 @@ public class Authentification implements Serializable {
 	private int id;
 
 	@Column(name = "AUTH_LOGIN", columnDefinition = "VARCHAR(45)")
-	@NotEmpty
+	//@NotEmpty
 	private String login;
 
 	@Column(name = "AUTH_MDP", columnDefinition = "VARCHAR(45)")
-	@NotEmpty
+	//@NotEmpty
 	private String mdp;
 
 	@Column(name = "AUTH_TYPE", columnDefinition = "VARCHAR(45)")
-	@NotEmpty
+	//@NotEmpty
 	private String type;
 
 	public Authentification() {
 
-	}
-
-	public Authentification(String login, String mdp, String type) {
-		this.login = login;
-		this.mdp = mdp;
-		this.type = type;
 	}
 
 	public int getId() {

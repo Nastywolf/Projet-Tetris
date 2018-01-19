@@ -26,12 +26,12 @@ public class TetriminoModel implements Serializable{
 	private int id;
 	
 	@Column(name="TETRIMINO_NOM", columnDefinition="VARCHAR(45)")
-	@NotEmpty
+	//@NotEmpty
 	//@Size(max=50)
 	private String nom;
 	
 	@Column(name = "TETRIMINO_COULEUR", columnDefinition = "VARCHAR(45)")
-	@NotEmpty
+	//@NotEmpty
 	//@Size(max=50)
 	//format RGB
 	private String couleur;
@@ -40,18 +40,8 @@ public class TetriminoModel implements Serializable{
 
 	}
 
-	public TetriminoModel(int id, String nom, String couleur) {
-		this.id = id;
-		this.nom = nom;
-		this.couleur = couleur;
-	}
-
 	public int getId() {
 		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getNom() {

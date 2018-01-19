@@ -35,6 +35,18 @@ public class TetriminoModel implements Serializable{
 	//@Size(max=50)
 	//format RGB
 	private String couleur;
+	
+	@Column(name = "TETRIMINO_FORME_BASE")
+	private String forme;
+	
+	@Column(name = "TETRIMINO_FORME_90")
+	private String forme90;
+	
+	@Column(name = "TETRIMINO_FORME_180")
+	private String forme180;
+	
+	@Column(name = "TETRIMINO_FORME_270")
+	private String forme270;
 
 	public TetriminoModel() {
 
@@ -59,11 +71,56 @@ public class TetriminoModel implements Serializable{
 	public void setCouleur(String couleur) {
 		this.couleur = couleur;
 	}
+	
+
+	public String getForme() {
+		return forme;
+	}
+
+	public void setForme(String forme) {
+		this.forme = forme;
+		this.forme90=rotate(this.forme);
+		this.forme180=rotate(this.forme90);
+		this.forme270=rotate(this.forme180);
+		
+	}
+
+	public String getForme90() {
+		return forme90;
+	}
+
+	public String getForme180() {
+		return forme180;
+	}
+
+	public String getForme270() {
+		return forme270;
+	}
 
 	@Override
 	public String toString() {
 		return "TetriminoModel [id=" + id + ", nom=" + nom + ", couleur=" + couleur + "]";
 	}
 
+	private static String rotate(String forme){
+		String res = "";
+		String[] temp = forme.split("/");
+		int h = temp.length;
+		
+		String[][] mat= new String[h][];
+		
+		for (int i =0; i<h; i++){
+			mat[i] = temp[h].split(",");
+		}
+		int l = mat[0].length;
+
+		for(int i = 0; i<l; i++){
+			for (int j = 0; j<h; j++){
+				res+=mat[i][h-j-1]+",";
+			}
+			res+="/";
+		}
+		return res;
+	}
 	
 }

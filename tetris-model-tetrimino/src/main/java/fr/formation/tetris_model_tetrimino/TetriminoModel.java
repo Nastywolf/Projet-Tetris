@@ -103,6 +103,7 @@ public class TetriminoModel implements Serializable{
 	}
 
 	private static String rotate(String forme){
+		//rotation dans le sens trigonométrique (anti-horaire)
 		String res = "";
 		String[] temp = forme.split("/");
 		int h = temp.length;
@@ -110,13 +111,13 @@ public class TetriminoModel implements Serializable{
 		String[][] mat= new String[h][];
 		
 		for (int i =0; i<h; i++){
-			mat[i] = temp[h].split(",");
+			mat[i] = temp[i].split(",");
 		}
 		int l = mat[0].length;
 
 		for(int i = 0; i<l; i++){
 			for (int j = 0; j<h; j++){
-				res+=mat[i][h-j-1]+",";
+				res+=mat[j][l-i-1]+",";
 			}
 			res+="/";
 		}

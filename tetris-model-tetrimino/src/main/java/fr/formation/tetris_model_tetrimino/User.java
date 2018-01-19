@@ -21,7 +21,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 public class User extends Authentification implements Serializable {
 	
-	@OneToMany(mappedBy="user")
+	@OneToMany(mappedBy="joueur")
 	private List<Partie> parties;
 	
 

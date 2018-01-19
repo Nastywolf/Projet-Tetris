@@ -36,12 +36,6 @@ public abstract class Authentification implements Serializable {
 	//@NotEmpty
 	private String mdp;
 
-
-
-	public Authentification() {
-		
-	}
-
 	public int getId() {
 		return id;
 	}

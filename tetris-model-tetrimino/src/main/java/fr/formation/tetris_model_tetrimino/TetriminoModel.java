@@ -15,7 +15,7 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
-@Table(name="produit")
+@Table(name="Tetrimino")
 @Cacheable
 @Cache(usage=CacheConcurrencyStrategy.READ_ONLY)
 public class TetriminoModel implements Serializable{

@@ -17,8 +17,5 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 public class Admin extends Authentification implements Serializable{
 
-	public Admin() {
-		super();
-		this.setType("Admin");
-	}
+
 }

@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
@@ -16,9 +18,10 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
 @Table(name = "authentification")
+@Inheritance(strategy=InheritanceType.JOINED)
 @Cacheable
 @Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
-public class Authentification implements Serializable {
+public abstract class Authentification implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,9 +36,7 @@ public class Authentification implements Serializable {
 	//@NotEmpty
 	private String mdp;
 
-	@Column(name = "AUTH_TYPE", columnDefinition = "VARCHAR(45)")
-	//@NotEmpty
-	private String type;
+
 
 	public Authentification() {
 		
@@ -61,18 +62,11 @@ public class Authentification implements Serializable {
 		this.mdp = mdp;
 	}
 
-	public String getType() {
-		return type;
-	}
-
-	protected void setType(String type) {
-		this.type = type;
-	}
 
 	@Override
 	public String toString() {
-		return "Authentification [getId()=" + getId() + ", getLogin()=" + getLogin() + ", getMdp()=" + getMdp()
-				+ ", getType()=" + getType() + "]";
+		return "Authentification getId()=" + getId() + ", getLogin()=" + getLogin() + ", getMdp()=" + getMdp()
+				;
 	}
 
 }

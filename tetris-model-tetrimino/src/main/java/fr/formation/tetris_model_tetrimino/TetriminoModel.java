@@ -50,7 +50,7 @@ public class TetriminoModel implements Serializable{
 	@Column(name = "TETRIMINO_FORME_270")
 	private String forme270;
 	
-	@OneToMany(mappedBy="tetrimino")
+	@OneToMany(mappedBy="piece")
 	private List<Coup> coups;
 
 	public TetriminoModel() {
@@ -100,6 +100,17 @@ public class TetriminoModel implements Serializable{
 
 	public String getForme270() {
 		return forme270;
+	}
+
+	
+	
+	
+	public List<Coup> getCoups() {
+		return coups;
+	}
+
+	public void setCoups(List<Coup> coups) {
+		this.coups = coups;
 	}
 
 	@Override

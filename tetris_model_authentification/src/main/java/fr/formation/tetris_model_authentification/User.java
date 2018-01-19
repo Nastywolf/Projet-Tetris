@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-import fr.formation.tetris_model_tetrimino.Partie;
+
 
 @Entity
 @Table(name = "user")
@@ -21,11 +21,8 @@ import fr.formation.tetris_model_tetrimino.Partie;
 @Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 public class User extends Authentification implements Serializable {
 	
-	@OneToMany(mappedBy="user")
-	private List<Partie> parties;
+//	@OneToMany(mappedBy="user")
+//	private List<Partie> parties;
 	
-	public User() {
-		super();
-		this.setType("User");
-	}
+
 }

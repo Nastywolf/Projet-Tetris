@@ -74,6 +74,16 @@ public class Partie implements Serializable {
 		return id;
 	}
 
+	
+	
+	public List<Coup> getCoups() {
+		return coups;
+	}
+
+	public void setCoups(List<Coup> coups) {
+		this.coups = coups;
+	}
+
 	@Override
 	public String toString() {
 		return "Partie [getJoueur()=" + getJoueur() + ", getDate()=" + getDate() + ", getScore()=" + getScore()

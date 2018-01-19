@@ -19,8 +19,6 @@ import javax.validation.constraints.NotEmpty;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-import fr.formation.tetris_model_authentification.User;
-
 @Entity
 @Table(name = "partie")
 @Cacheable

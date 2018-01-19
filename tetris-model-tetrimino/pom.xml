@@ -16,11 +16,6 @@
 	</properties>
 
 	<dependencies>
-	<dependency>
-			<groupId>fr.formation</groupId>
-			<artifactId>tetris_model_authentification</artifactId>
-			<version>${tetris.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

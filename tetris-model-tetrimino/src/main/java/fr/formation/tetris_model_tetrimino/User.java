@@ -1,4 +1,4 @@
-package fr.formation.tetris_model_authentification;
+package fr.formation.tetris_model_tetrimino;
 
 import java.io.Serializable;
 import java.util.List;
@@ -21,8 +21,8 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 public class User extends Authentification implements Serializable {
 	
-//	@OneToMany(mappedBy="user")
-//	private List<Partie> parties;
+	@OneToMany(mappedBy="user")
+	private List<Partie> parties;
 	
 
 }

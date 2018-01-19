@@ -8,7 +8,6 @@ import org.springframework.core.env.Environment;
 import fr.formation.config.*;
 import fr.formation.tetris_dao.IAuthentificationDAO;
 import fr.formation.tetris_dao.ITetriminoDAO;
-import fr.formation.tetris_model_authentification.Authentification;
 import fr.formation.tetris_model_tetrimino.TetriminoModel;
 
 //import fr.formation.tetris_model_tetrimino.TetriminoModel;

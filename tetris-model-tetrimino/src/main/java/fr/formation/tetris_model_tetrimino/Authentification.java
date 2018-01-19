@@ -1,4 +1,4 @@
-package fr.formation.tetris_model_authentification;
+package fr.formation.tetris_model_tetrimino;
 
 import java.io.Serializable;
 

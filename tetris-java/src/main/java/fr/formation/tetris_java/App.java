@@ -7,7 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import fr.formation.config.*;
 
-import fr.formation.tetris_model_tetrimino.TetriminoModel;
+//import fr.formation.tetris_model_tetrimino.TetriminoModel;
 
 
 public class App 

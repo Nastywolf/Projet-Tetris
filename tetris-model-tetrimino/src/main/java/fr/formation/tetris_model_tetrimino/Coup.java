@@ -31,7 +31,8 @@ public class Coup implements Serializable {
 	@JoinColumn(name = "COUP_PARTIE_ID")
 	private Partie partie;
 
-	@OneToMany(mappedBy = "coup")
+	@ManyToOne
+	@JoinColumn(name = "COUP_PIECE_ID")
 	private TetriminoModel piece;
 
 	public Coup() {

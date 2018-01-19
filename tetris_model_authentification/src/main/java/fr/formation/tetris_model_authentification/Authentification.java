@@ -38,7 +38,7 @@ public class Authentification implements Serializable {
 	private String type;
 
 	public Authentification() {
-
+		
 	}
 
 	public int getId() {

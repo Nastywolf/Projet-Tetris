@@ -1,27 +1,54 @@
 package fr.formation.tetris_model_authentification;
 
-public abstract class Authentification {
+import java.io.Serializable;
+
+import javax.persistence.Cacheable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+@Entity
+@Table(name = "produit")
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
+public class Authentification implements Serializable {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "AUTH_ID")
 	private int id;
+
+	@Column(name = "AUTH_LOGIN", columnDefinition = "VARCHAR(45)")
+	@NotEmpty
 	private String login;
+
+	@Column(name = "AUTH_MDP", columnDefinition = "VARCHAR(45)")
+	@NotEmpty
 	private String mdp;
+
+	@Column(name = "AUTH_TYPe", columnDefinition = "VARCHAR(45)")
+	@NotEmpty
+	private String type;
 
 	public Authentification() {
 
 	}
 
-	public Authentification(int id, String login, String mdp) {
-
-		this.id = id;
+	public Authentification(String login, String mdp, String type) {
 		this.login = login;
 		this.mdp = mdp;
+		this.type = type;
 	}
 
 	public int getId() {
 		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getLogin() {
@@ -40,9 +67,18 @@ public abstract class Authentification {
 		this.mdp = mdp;
 	}
 
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
 	@Override
 	public String toString() {
-		return "Authentification [getId()=" + getId() + ", getLogin()=" + getLogin() + ", getMdp()=" + getMdp() + "]";
+		return "Authentification [getId()=" + getId() + ", getLogin()=" + getLogin() + ", getMdp()=" + getMdp()
+				+ ", getType()=" + getType() + "]";
 	}
 
 }

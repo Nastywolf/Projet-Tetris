@@ -30,7 +30,7 @@ public class TetriminoModel implements Serializable{
 	//@Size(max=50)
 	private String nom;
 	
-	@Column(name="TETRIMINO_COULEUR", columnDefinition="VARCHAR(45)")
+	@Column(name = "TETRIMINO_COULEUR", columnDefinition = "VARCHAR(45)")
 	@NotEmpty
 	//@Size(max=50)
 	//format RGB

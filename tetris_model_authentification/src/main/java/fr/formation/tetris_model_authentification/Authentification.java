@@ -1,16 +1,16 @@
 package fr.formation.tetris_model_authentification;
 
-public class Authentification {
+public abstract class Authentification {
 	private int id;
 	private String login;
 	private String mdp;
 
 	public Authentification() {
-		super();
+
 	}
 
 	public Authentification(int id, String login, String mdp) {
-		super();
+
 		this.id = id;
 		this.login = login;
 		this.mdp = mdp;

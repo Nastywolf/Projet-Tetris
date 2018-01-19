@@ -65,7 +65,7 @@ public class Authentification implements Serializable {
 		return type;
 	}
 
-	public void setType(String type) {
+	protected void setType(String type) {
 		this.type = type;
 	}
 

@@ -15,7 +15,7 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
-@Table(name = "produit")
+@Table(name = "authentification")
 @Cacheable
 @Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 public class Authentification implements Serializable {
@@ -33,7 +33,7 @@ public class Authentification implements Serializable {
 	@NotEmpty
 	private String mdp;
 
-	@Column(name = "AUTH_TYPe", columnDefinition = "VARCHAR(45)")
+	@Column(name = "AUTH_TYPE", columnDefinition = "VARCHAR(45)")
 	@NotEmpty
 	private String type;
 

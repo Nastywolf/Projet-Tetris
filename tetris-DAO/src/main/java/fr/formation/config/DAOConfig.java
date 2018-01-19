@@ -1,8 +1,6 @@
 package fr.formation.config;
 
 
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.Properties;
 
 import javax.persistence.EntityManagerFactory;

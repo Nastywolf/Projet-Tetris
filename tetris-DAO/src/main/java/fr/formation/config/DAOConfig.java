@@ -3,6 +3,7 @@ package fr.formation.config;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Properties;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +12,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
+
 
 @Configuration
 @ComponentScan({ "fr.formation.tetris_model_tetrimino", "fr.formation.tetris_model_faq" , "fr.formation.tetris_dao" })
@@ -38,6 +39,7 @@ public class DAOConfig {
 	}
 	
 	
+
 	@Bean
 	public Connection getConn() {
 		try {

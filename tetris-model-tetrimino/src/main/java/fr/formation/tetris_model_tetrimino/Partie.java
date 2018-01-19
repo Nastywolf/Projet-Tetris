@@ -2,6 +2,7 @@ package fr.formation.tetris_model_tetrimino;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Cacheable;
 import javax.persistence.Column;
@@ -11,13 +12,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-import fr.formation.tetris_model_authentification.Authentification;
+import fr.formation.tetris_model_authentification.User;
 
 @Entity
 @Table(name = "partie")
@@ -32,7 +34,7 @@ public class Partie implements Serializable {
 
 	@ManyToOne
 	@JoinColumn(name = "PARTIE_AUTH_ID")
-	private Authentification joueur;
+	private User joueur;
 
 	@Column(name = "PARTIE_DATE")
 	//@NotEmpty
@@ -40,12 +42,15 @@ public class Partie implements Serializable {
 
 	@Column(name = "PARTIE_SCORE")
 	private int score = 0;
+	
+	@OneToMany(mappedBy="partie")
+	private List<Coup> coups;
 
-	public Authentification getJoueur() {
+	public User getJoueur() {
 		return joueur;
 	}
 
-	public void setJoueur(Authentification joueur) {
+	public void setJoueur(User joueur) {
 		this.joueur = joueur;
 	}
 

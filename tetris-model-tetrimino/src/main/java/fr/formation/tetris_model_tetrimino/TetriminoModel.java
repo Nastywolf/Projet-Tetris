@@ -1,6 +1,7 @@
 package fr.formation.tetris_model_tetrimino;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Cacheable;
 import javax.persistence.Column;
@@ -8,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
@@ -47,6 +49,9 @@ public class TetriminoModel implements Serializable{
 	
 	@Column(name = "TETRIMINO_FORME_270")
 	private String forme270;
+	
+	@OneToMany(mappedBy="tetrimino")
+	private List<Coup> coups;
 
 	public TetriminoModel() {
 

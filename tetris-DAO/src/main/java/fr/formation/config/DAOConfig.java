@@ -83,13 +83,5 @@ public class DAOConfig {
 	return new PersistenceExceptionTranslationPostProcessor();
 	}
 	
-//	@Bean
-//	public Connection getConn() {
-//		try {
-//			return this.dataSource().getConnection();
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//		return null;
-//	}
+
 }

@@ -74,6 +74,10 @@ public class Partie implements Serializable {
 
 	
 	
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public List<Coup> getCoups() {
 		return coups;
 	}

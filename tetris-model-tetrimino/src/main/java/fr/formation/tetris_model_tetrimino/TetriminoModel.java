@@ -52,10 +52,16 @@ public class TetriminoModel implements Serializable{
 	
 	@OneToMany(mappedBy="piece")
 	private List<Coup> coups;
-
+	
 	public TetriminoModel() {
 
 	}
+	
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+
 
 	public int getId() {
 		return id;

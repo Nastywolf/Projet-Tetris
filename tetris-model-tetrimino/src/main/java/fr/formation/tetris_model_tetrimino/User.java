@@ -1,6 +1,6 @@
 package fr.formation.tetris_model_tetrimino;
 
-import java.io.Serializable;
+
 import java.util.List;
 
 import javax.persistence.Cacheable;
@@ -19,7 +19,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @PrimaryKeyJoinColumn(name = "USER_ID", referencedColumnName = "AUTH_ID")
 @Cacheable
 @Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
-public class User extends Authentification implements Serializable {
+public class User extends Authentification {
 	
 	@OneToMany(mappedBy="joueur")
 	private List<Partie> parties;

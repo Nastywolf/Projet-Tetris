@@ -30,11 +30,11 @@ public class App
 		IUserDAO daoU = myContext.getBean(IUserDAO.class);
 		IAdminDAO daoA = myContext.getBean(IAdminDAO.class);
 		
-		Admin a1 = new Admin();
-		a1.setLogin("Batman");
-		a1.setMdp("ImNotGay");
+		User j1 = new User();
+		j1.setLogin("Alberto");
+		j1.setMdp("azerty");
 		
-		daoA.save(a1);
+		daoU.save(j1);
 	myContext.close();
     }
 }

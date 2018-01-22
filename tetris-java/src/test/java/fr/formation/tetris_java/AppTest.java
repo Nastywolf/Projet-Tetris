@@ -73,7 +73,6 @@ public class AppTest {
 	}
 	
 	@Test
-	@Transactional
 	public void RotationTetriminoTest(){
 		TetriminoModel myTetrimino = new TetriminoModel();
 		myTetrimino.setForme("1,1,0,/0,1,0,/");

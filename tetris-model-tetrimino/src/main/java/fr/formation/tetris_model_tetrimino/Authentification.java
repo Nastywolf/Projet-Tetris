@@ -28,7 +28,7 @@ public abstract class Authentification implements Serializable {
 	@Column(name = "AUTH_ID")
 	private int id;
 
-	@Column(name = "AUTH_LOGIN", columnDefinition = "VARCHAR(45)")
+	@Column(name = "AUTH_LOGIN", columnDefinition = "VARCHAR(45)", unique=true)
 	//@NotEmpty
 	private String login;
 

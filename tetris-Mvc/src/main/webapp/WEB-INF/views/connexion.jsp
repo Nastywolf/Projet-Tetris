@@ -13,6 +13,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<p>${pageContext.request.requestURI}</p>
 </body>
 </html>

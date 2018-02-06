@@ -4,6 +4,7 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
+<<<<<<< Updated upstream
 <tiles:insertDefinition name="app.layout">
 	<tiles:putAttribute name="title" value="La FAQ" />
 	<tiles:putAttribute name="content">
@@ -34,3 +35,15 @@
 
 	</tiles:putAttribute>
 </tiles:insertDefinition>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p>${pageContext.request.requestURI}</p>
+</body>
+</html>
+>>>>>>> Stashed changes

@@ -18,13 +18,13 @@ import fr.formation.tetris_dao.IFaqDAO;
 @RequestMapping(value = "/faq")
 public class FAQController {
 
-	@Autowired
-	private IFaqDAO daoFaq;
-
-	@GetMapping("/liste")
-	public String liste(Model model) {
-		model.addAttribute("faq", daoFaq.findAll());
-		return "listeFAQ";
-	}
+//	@Autowired
+//	private IFaqDAO daoFaq;
+//
+//	@GetMapping("/liste")
+//	public String liste(Model model) {
+//		model.addAttribute("faq", daoFaq.findAll());
+//		return "listeFAQ";
+//	}
 
 }

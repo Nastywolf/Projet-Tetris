@@ -2,11 +2,11 @@
 
 
 <ul class="nav nav-tabs">
-	<li class="nav-item"><a class="nav-link active" href="/Mvc/home">Accueil</a>
+	<li class="nav-item"><a class="nav-link active" href="/tetris-Mvc/home">Accueil</a>
 	</li>
 	<li class="nav-item"><a class="nav-link"
-		href="/Mvc/produits/liste">Tetrimino</a></li>
+		href="/tetris-Mvc/tetrimino">Tetrimino</a></li>
 	<li class="nav-item"><a class="nav-link"
-		href="/Mvc/produits/ajouter">FAQ</a></li>
-	<li class="nav-item"><a class="nav-link">Connexion</a></li>
+		href="/tetris-Mvc/faq">FAQ</a></li>
+	<li class="nav-item"><a class="nav-link" href="/tetris-Mvc/connexion">Connexion</a></li>
 </ul>

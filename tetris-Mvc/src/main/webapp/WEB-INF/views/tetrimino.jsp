@@ -9,9 +9,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>blablbalbalablba</title>
 </head>
 <body>
-
+<p>${pageContext.request.requestURI}</p>
 </body>
 </html>

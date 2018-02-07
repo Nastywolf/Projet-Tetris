@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value="/tetrimino")
 public class TetriminoController {
 
-	@GetMapping
+	@GetMapping("")
 	public String liste(Model model) {
-		return "listeFAQ";
+		return "tetrimino";
 	}
 }

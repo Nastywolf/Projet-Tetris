@@ -10,7 +10,7 @@
 	<tiles:putAttribute name="content">
 
 		<div>
-			<a href="/tetris-Mvc/tetrimino/ajouter"><button type="button"
+			<a href="/tetris-Mvc/tetrimino/taille"><button type="button"
 					class="btn btn-success">Ajouter</button></a>
 		</div>
 		<table class="table table-striped">

@@ -9,7 +9,7 @@
 	<tiles:putAttribute name="title" value="La FAQ" />
 	<tiles:putAttribute name="content">
 		<div>
-			<a href="/tetris-mvc/faq/ajouter"><button type="button"
+			<a href="/tetris-Mvc/faq/ajouter"><button type="button"
 					class="btn btn-success">Ajouter</button></a>
 		</div>
 		<table class="table table-striped">
@@ -25,9 +25,9 @@
 					<td>${faq.id}</td>
 					<td>${faq.question}</td>
 					<td>${faq.reponse}</td>
-					<td><a href="/tetris-mvc/faq/editer?id=${faq.id }"><button
+					<td><a href="/tetris-Mvc/faq/editer?id=${faq.id }"><button
 								type="button" class="btn btn-outline-primary">modifier</button></a>
-						<a href="/tetris-mvc/faq/supprimer?id=${faq.id }"><button
+						<a href="/tetris-Mvc/faq/supprimer?id=${faq.id }"><button
 								type="button" class="btn btn-danger">X</button></a></td>
 				</tr>
 			</c:forEach>

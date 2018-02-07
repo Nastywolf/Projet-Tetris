@@ -36,6 +36,7 @@
 			</div>
  --%>
 			<div>
+			<label>Forme :</label>
 				<table>
 					<c:forEach var="i" begin="1" end="${ taille }">
 						<tr>

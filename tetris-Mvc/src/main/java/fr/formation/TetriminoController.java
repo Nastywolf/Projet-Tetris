@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import fr.formation.tetris_dao.ITetriminoDAO;
-import fr.formation.tetris_model_faq.Faq;
 import fr.formation.tetris_model_tetrimino.TetriminoModel;
 
 @Controller
@@ -33,8 +32,14 @@ public class TetriminoController {
 		return "tetrimino";
 	}
 
+	@GetMapping("/taille")
+	public String taille(Model model) {
+		return "tetriminotaille";
+	}
+	
 	@GetMapping("/ajouter")
-	public String ajouter(Model model) {
+	public String ajouter(Model model, @RequestParam int taille) {
+		model.addAttribute("taille", taille);
 		model.addAttribute("tetrimino", new TetriminoModel());
 		return "tetriminoedit";
 	}

@@ -10,11 +10,9 @@
 		<form:form method="POST" modelAttribute="tetrimino">
 			<div class="form-group">
 				<form:label path="nom">Nom :</form:label>
-				<form:input path="nom" type="text" class="form-control"
-					name="nom" aria-describedby="Help" placeholder="nom"
-					value="${tetrimino.nom}" />
-				<form:errors path="nom" element="div"
-					cssClass="alert alert-danger" />
+				<form:input path="nom" type="text" class="form-control" name="nom"
+					aria-describedby="Help" placeholder="nom" value="${tetrimino.nom}" />
+				<form:errors path="nom" element="div" cssClass="alert alert-danger" />
 
 			</div>
 
@@ -28,19 +26,29 @@
 
 			</div>
 
-			<div class="form-group">
+<%-- 			<div class="form-group">
 				<form:label path="forme">Forme :</form:label>
 				<form:input path="forme" type="text" class="form-control"
 					name="forme" aria-describedby="Help" placeholder="forme"
 					value="${tetrimino.forme}" />
 				<form:errors path="forme" element="div"
 					cssClass="alert alert-danger" />
-
 			</div>
+ --%>
+			<div>
+			<label>Forme :</label>
+				<table>
+					<c:forEach var="i" begin="1" end="${ taille }">
+						<tr>
+							<c:forEach var="j" begin="1" end="${taille}">
+								<td><input type="checkbox" id="${i}.${j}" name="${i}.${j}"></td>
+							</c:forEach>
+						</tr>
+					</c:forEach>
+				</table>
+			</div>
+
 			<button type="submit" class="btn btn-danger">Ajouter</button>
-
-
-
 		</form:form>
 	</tiles:putAttribute>
 </tiles:insertDefinition>

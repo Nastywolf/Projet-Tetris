@@ -17,7 +17,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Entity
 @Table(name = "faq")
 @Cacheable
-@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Faq implements Serializable {
 
 	@Id
@@ -31,11 +31,12 @@ public class Faq implements Serializable {
 	@Column(name = "FAQ_REPONSE")
 	private String reponse;
 
-	public Faq() {
-	}
-
 	public int getId() {
 		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getQuestion() {

@@ -19,7 +19,6 @@ import fr.formation.tetris_model_faq.Faq;
 @RequestMapping(value = "/faq")
 public class FAQController {
 
-<<<<<<< Updated upstream
 	@Autowired
 	private IFaqDAO daoFaq;
 
@@ -70,20 +69,5 @@ public class FAQController {
 		
 		return "redirect:.";
 	}
-=======
-	
-	@GetMapping("")
-	public String liste(Model model) {
-		return "faq";
-	}
-//	@Autowired
-//	private IFaqDAO daoFaq;
-//
-//	@GetMapping("/liste")
-//	public String liste(Model model) {
-//		model.addAttribute("faq", daoFaq.findAll());
-//		return "listeFAQ";
-//	}
->>>>>>> Stashed changes
 
 }

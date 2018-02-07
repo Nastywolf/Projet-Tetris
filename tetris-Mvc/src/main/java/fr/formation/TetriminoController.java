@@ -24,8 +24,12 @@ public class TetriminoController {
 	private ITetriminoDAO daoTetrimino;
 	
 	@GetMapping("")
+<<<<<<< Updated upstream
 	public String liste(Model model) {
 		model.addAttribute("tetrimino", daoTetrimino.findAll());
+=======
+	public String tetrimino(Model model) {
+>>>>>>> Stashed changes
 		return "tetrimino";
 	}
 

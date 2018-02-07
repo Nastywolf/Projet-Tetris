@@ -22,6 +22,10 @@ public class FAQController {
 	@Autowired
 	private IFaqDAO daoFaq;
 
+	@ModelAttribute("page")
+	public String page() {
+		return "faq";
+	}
 	@GetMapping("")
 	public String liste(Model model) {
 		model.addAttribute("faq", daoFaq.findAll());

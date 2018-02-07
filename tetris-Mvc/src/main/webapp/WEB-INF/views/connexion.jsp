@@ -9,26 +9,23 @@
 	<tiles:putAttribute name="title" value="Connexion" />
 	<tiles:putAttribute name="content">
 
-		<div>
-			<p>${pageContext.request.requestURI}</p>
-		</div>
-		<form:form method="POST" modelAttribute="connexion">
+		<form:form method="POST">
 			<div class="form-group">
-				<form:label path="login">Login :</form:label>
-				<form:input path="login" type="text" class="form-control"
-					name="question" aria-describedby="Help" placeholder="Entrez votre pseudo"
-					 />
-				<form:errors path="login" element="div"
+				<label>Login :</label>
+				<input type="text" class="form-control"
+					name="login" aria-describedby="Help"
+					placeholder="Entrez votre pseudo" />
+				<form:errors element="div"
 					cssClass="alert alert-danger" />
 
 			</div>
-
+			<p>${page }</p>
 			<div class="form-group">
-				<form:label path="mdp">Password :</form:label>
-				<form:input path="mdp" type="password" class="form-control"
-					name="reponse" aria-describedby="Help" placeholder="Entrez votre Mot de passe" />
-				<form:errors path="mdp" element="div"
-					cssClass="alert alert-danger" />
+				<label>Password :</label>
+				<input  type="password" class="form-control"
+					name="password" aria-describedby="Help"
+					placeholder="Entrez votre Mot de passe" />
+				<form:errors element="div" cssClass="alert alert-danger" />
 
 			</div>
 

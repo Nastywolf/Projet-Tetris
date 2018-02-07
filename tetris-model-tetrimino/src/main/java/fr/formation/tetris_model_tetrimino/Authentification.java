@@ -21,7 +21,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Inheritance(strategy=InheritanceType.JOINED)
 @Cacheable
 @Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
-public abstract class Authentification implements Serializable {
+public class Authentification implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

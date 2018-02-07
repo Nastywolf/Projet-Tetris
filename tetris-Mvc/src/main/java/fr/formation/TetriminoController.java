@@ -22,13 +22,15 @@ public class TetriminoController {
 	@Autowired
 	private ITetriminoDAO daoTetrimino;
 	
+	
+	@ModelAttribute("page")
+	public String page() {
+		return "tetrimino";
+	}
+	
 	@GetMapping("")
-<<<<<<< Updated upstream
 	public String liste(Model model) {
 		model.addAttribute("tetrimino", daoTetrimino.findAll());
-=======
-	public String tetrimino(Model model) {
->>>>>>> Stashed changes
 		return "tetrimino";
 	}
 

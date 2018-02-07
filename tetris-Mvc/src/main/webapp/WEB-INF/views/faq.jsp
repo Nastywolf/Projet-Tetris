@@ -8,6 +8,7 @@
 <tiles:insertDefinition name="app.layout">
 	<tiles:putAttribute name="title" value="La FAQ" />
 	<tiles:putAttribute name="content">
+	
 		<div>
 			<a href="/tetris-Mvc/faq/ajouter"><button type="button"
 					class="btn btn-success">Ajouter</button></a>

@@ -6,30 +6,34 @@
 
 
 <tiles:insertDefinition name="app.layout">
-	<tiles:putAttribute name="title" value="La FAQ" />
+	<tiles:putAttribute name="title" value="Les Tetriminos" />
 	<tiles:putAttribute name="content">
+
 		<div>
-			<p>${pageContext.request.requestURI}</p>
+			<a href="/tetris-Mvc/tetrimino/ajouter"><button type="button"
+					class="btn btn-success">Ajouter</button></a>
 		</div>
 		<table class="table table-striped">
 			<thead>
 				<tr>
 					<th>Id</th>
-					<th>Question</th>
-					<th>Réponse</th>
+					<th>Nom</th>
+					<th>Couleur</th>
+					<th>Forme</th>
 				</tr>
 			</thead>
-			
+			<c:forEach items="${tetrimino}" var="tetrimino">
 				<tr>
-					<td>${faq.id}</td>
-					<td>${faq.question}</td>
-					<td>${faq.reponse}</td>
-					<td><a href="/tetris-mvc/faq/editer?id=${faq.id }"><button
+					<td>${tetrimino.id}</td>
+					<td>${tetrimino.nom}</td>
+					<td>${tetrimino.couleur}</td>
+					<td>${tetrimino.forme}</td>
+					<td><a href="/tetris-Mvc/tetrimino/editer?id=${tetrimino.id }"><button
 								type="button" class="btn btn-outline-primary">modifier</button></a>
-						<a href="/tetris-mvc/faq/supprimer?id=${faq.id }"><button
+						<a href="/tetris-Mvc/tetrimino/supprimer?id=${tetrimino.id }"><button
 								type="button" class="btn btn-danger">X</button></a></td>
 				</tr>
-			
+			</c:forEach>
 		</table>
 
 	</tiles:putAttribute>

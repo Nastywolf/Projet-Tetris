@@ -4,6 +4,7 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
+
 <tiles:insertDefinition name="app.layout">
 	<tiles:putAttribute name="title" value="Connexion" />
 	<tiles:putAttribute name="content">

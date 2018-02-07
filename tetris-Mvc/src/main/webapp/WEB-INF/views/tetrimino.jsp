@@ -9,7 +9,7 @@
 	<tiles:putAttribute name="title" value="La FAQ" />
 	<tiles:putAttribute name="content">
 		<div>
-			
+			<p>${pageContext.request.requestURI}</p>
 		</div>
 		<table class="table table-striped">
 			<thead>

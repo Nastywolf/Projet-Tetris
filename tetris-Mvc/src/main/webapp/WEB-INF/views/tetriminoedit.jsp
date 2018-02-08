@@ -15,8 +15,8 @@
 				<form:errors path="nom" element="div" cssClass="alert alert-danger" />
 
 			</div>
-
-			<div class="form-group">
+			
+			<div class="form-group" >
 				<form:label path="couleur">Couleur :</form:label>
 				<form:input path="couleur" type="color" class="bfh-colorpicker"
 					name="couleur" aria-describedby="Help" placeholder="couleur"
@@ -26,7 +26,7 @@
 
 			</div>
 
-<%-- 			<div class="form-group">
+			<%-- 			<div class="form-group">
 				<form:label path="forme">Forme :</form:label>
 				<form:input path="forme" type="text" class="form-control"
 					name="forme" aria-describedby="Help" placeholder="forme"
@@ -36,7 +36,7 @@
 			</div>
  --%>
 			<div>
-			<label>Forme :</label>
+				<label>Forme :</label>
 				<table>
 					<c:forEach var="i" begin="1" end="${ taille }">
 						<tr>

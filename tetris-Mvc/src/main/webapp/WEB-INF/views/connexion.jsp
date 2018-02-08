@@ -11,19 +11,15 @@
 
 		<form:form method="POST">
 			<div class="form-group">
-				<label>Login :</label>
-				<input type="text" class="form-control"
+				<label>Login :</label> <input type="text" class="form-control"
 					name="login" aria-describedby="Help"
 					placeholder="Entrez votre pseudo" />
-				<form:errors element="div"
-					cssClass="alert alert-danger" />
+				<form:errors element="div" cssClass="alert alert-danger" />
 
 			</div>
-			<p>${page }</p>
 			<div class="form-group">
-				<label>Password :</label>
-				<input  type="password" class="form-control"
-					name="password" aria-describedby="Help"
+				<label>Password :</label> <input type="password"
+					class="form-control" name="password" aria-describedby="Help"
 					placeholder="Entrez votre Mot de passe" />
 				<form:errors element="div" cssClass="alert alert-danger" />
 

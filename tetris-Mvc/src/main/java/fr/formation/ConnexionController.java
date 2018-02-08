@@ -83,7 +83,7 @@ public class ConnexionController {
 	@GetMapping("/deconnection")
 	public String deconnect(HttpSession ses) {
 		ses.invalidate();
-		return "redirect:./home";
+		return "redirect:../home";
 	}
 	
 }

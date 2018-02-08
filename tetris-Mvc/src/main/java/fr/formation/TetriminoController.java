@@ -34,8 +34,16 @@ public class TetriminoController {
 		return "tetrimino";
 	}
 
-	@GetMapping("/taille")
+	@GetMapping("/tailleadd")
 	public String taille(Model model) {
+		model.addAttribute("mode", "ajouter");
+		return "tetriminotaille";
+	}
+	
+	@GetMapping("/tailleed")
+	public String taille(@RequestParam("id") int id, Model model){
+		model.addAttribute("mode", "editer");
+		model.addAttribute("id", id);
 		return "tetriminotaille";
 	}
 	
@@ -57,7 +65,8 @@ public class TetriminoController {
 	}
 	
 	@GetMapping("/editer")
-	public String editer( @RequestParam("id") int id, Model model) {
+	public String editer( @RequestParam("id") int id, Model model, @RequestParam("taille") int taille) {
+		model.addAttribute("taille", taille);
 		model.addAttribute("tetrimino", daoTetrimino.findById(id).get());
 		return "tetriminoedit";
 	}

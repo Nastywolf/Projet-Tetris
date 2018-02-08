@@ -10,7 +10,7 @@
 	<tiles:putAttribute name="content">
 
 		<div>
-			<a href="/tetris-Mvc/tetrimino/taille"><button type="button"
+			<a href="/tetris-Mvc/tetrimino/tailleadd"><button type="button"
 					class="btn btn-success">Ajouter</button></a>
 		</div>
 		<table class="table table-striped">
@@ -28,7 +28,7 @@
 					<td>${tetrimino.nom}</td>
 					<td>${tetrimino.couleur}</td>
 					<td>${tetrimino.forme}</td>
-					<td><a href="/tetris-Mvc/tetrimino/editer?id=${tetrimino.id }"><button
+					<td><a href="/tetris-Mvc/tetrimino/tailleed?id=${tetrimino.id }"><button
 								type="button" class="btn btn-outline-primary">modifier</button></a>
 						<a href="/tetris-Mvc/tetrimino/supprimer?id=${tetrimino.id }"><button
 								type="button" class="btn btn-danger">X</button></a></td>

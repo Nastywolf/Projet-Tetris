@@ -1,5 +1,6 @@
 package fr.formation;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,7 +57,7 @@ public class ConnexionController {
 //	}
 	
 	@PostMapping("")
-	public String connexion(@Valid @ModelAttribute("login") Authentification auth, BindingResult result, Model model) {
+	public String connexion(@Valid @ModelAttribute("login") Authentification auth, BindingResult result,HttpSession ses, Model model) {
 		
 		
 		User j = daoUser.auth(auth.getLogin(), auth.getMdp());
@@ -65,10 +66,12 @@ public class ConnexionController {
 		if (j != null) {
 			model.addAttribute("utilisateur", j);
 			System.out.println(j);
+			ses.setAttribute("login", auth);
 			return "redirect:./home";
 		} else if (a != null) {
 			model.addAttribute("utilisateur", a);
 			System.out.println(j);
+			ses.setAttribute("login", auth);
 			return "redirect:./home";
 		} else 	{
 			
@@ -77,24 +80,10 @@ public class ConnexionController {
 		}
 	}
 	
-//	@PostMapping("/connect")
-//	public String connect(@Valid @ModelAttribute("login") String login, BindingResult result,
-//			@Valid @ModelAttribute("password") String password, BindingResult result2, Model model) {
-//
-//		Joueur j = daoJoueur.auth(login, password);
-//		Admin a = daoAdmin.auth(login, password);
-//
-//		if (j != null) {
-//			model.addAttribute("utilisateur", daoJoueur.auth(login, password));
-//			System.out.println(j);
-//			return "connected";
-//		} else if (a != null) {
-//			model.addAttribute("utilisateur", daoAdmin.auth(login, password));
-//			System.out.println(j);
-//			return "connected";
-//		} else {
-//
-//			return "connect";
-//		}
-//	}
+	@GetMapping("/deconnection")
+	public String deconnect(HttpSession ses) {
+		ses.invalidate();
+		return "redirect:./home";
+	}
+	
 }

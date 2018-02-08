@@ -19,5 +19,5 @@ input[type="checkbox"].radio+label:hover {
 }
 
 input[type="checkbox"].radio:checked+label {
-	background: blue;
+	background: #80ffff;
 }

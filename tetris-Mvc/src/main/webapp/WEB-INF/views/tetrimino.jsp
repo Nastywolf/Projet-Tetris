@@ -27,8 +27,24 @@
 					<td>${tetrimino.id}</td>
 					<td>${tetrimino.nom}</td>
 					<td>${tetrimino.couleur}</td>
-					<td>${tetrimino.forme}</td>
-					<td><a href="/tetris-Mvc/tetrimino/tailleed?id=${tetrimino.id }"><button
+					<td>
+						<table bordercolor="black" border="2px">
+							<c:forTokens items="${tetrimino.forme}" delims="/" var="ligne">
+								<tr>
+									<c:forTokens items="${ligne}" delims="," var="valeur">
+										<c:if test="${valeur == 1}">
+											<td bgcolor="${tetrimino.couleur}" style="border:1px solid grey;"></td>
+										</c:if>
+										<c:if test="${valeur == 0}">
+											<td bgcolor="white" style="border:1px solid grey;"></td>
+										</c:if>
+									</c:forTokens>
+								</tr>
+							</c:forTokens>
+						</table>
+					</td>
+					<td><a
+						href="/tetris-Mvc/tetrimino/tailleed?id=${tetrimino.id }"><button
 								type="button" class="btn btn-outline-primary">modifier</button></a>
 						<a href="/tetris-Mvc/tetrimino/supprimer?id=${tetrimino.id }"><button
 								type="button" class="btn btn-danger">X</button></a></td>

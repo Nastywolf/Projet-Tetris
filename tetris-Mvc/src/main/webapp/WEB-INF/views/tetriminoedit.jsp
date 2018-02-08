@@ -41,7 +41,7 @@
 					<c:forEach var="i" begin="1" end="${ taille }">
 						<tr>
 							<c:forEach var="j" begin="1" end="${taille}">
-								<td><input type="checkbox" id="${i}.${j}" name="${i}.${j}"></td>
+								<td><input class="radio" type="checkbox" id="${i}.${j}" name="${i}.${j}"> <label for="${i}.${j}"></label></td>
 							</c:forEach>
 						</tr>
 					</c:forEach>

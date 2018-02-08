@@ -1,0 +1,23 @@
+@charset "ISO-8859-1";
+
+input[type="checkbox"].radio {
+	display: none;
+}
+
+input[type="checkbox"].radio+label  {
+	position: relative;
+	content: "aaa";
+	width: 40px;
+	height: 40px;
+	margin: 0px;
+	background: white;
+	border:solid black 1px;
+}
+
+input[type="checkbox"].radio+label:hover {
+	background: grey;
+}
+
+input[type="checkbox"].radio:checked+label {
+	background: blue;
+}

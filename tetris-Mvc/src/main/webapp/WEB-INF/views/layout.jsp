@@ -8,6 +8,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="/tetris-Mvc/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/tetris-Mvc/css/checkbox.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>Le meilleur Tetris</title>

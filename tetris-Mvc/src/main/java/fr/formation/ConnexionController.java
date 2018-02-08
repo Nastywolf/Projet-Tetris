@@ -15,6 +15,7 @@ import fr.formation.tetris_dao.IAdminDAO;
 import fr.formation.tetris_dao.IAuthentificationDAO;
 import fr.formation.tetris_dao.IUserDAO;
 import fr.formation.tetris_model_tetrimino.Admin;
+import fr.formation.tetris_model_tetrimino.Authentification;
 import fr.formation.tetris_model_tetrimino.User;
 
 @Controller
@@ -55,22 +56,23 @@ public class ConnexionController {
 //	}
 	
 	@PostMapping("")
-	public String connexion(@Valid @ModelAttribute("login") String login, BindingResult result,
-			@Valid @ModelAttribute("password") String password, BindingResult result2, Model model) {
-
-		User j = daoUser.auth(login, password);
-		Admin a = daoAdmin.auth(login, password);
+	public String connexion(@Valid @ModelAttribute("login") Authentification auth, BindingResult result, Model model) {
+		
+		
+		User j = daoUser.auth(auth.getLogin(), auth.getMdp());
+		Admin a = daoAdmin.auth(auth.getLogin(), auth.getMdp());
 
 		if (j != null) {
-			model.addAttribute("utilisateur", daoUser.auth(login, password));
+			model.addAttribute("utilisateur", j);
 			System.out.println(j);
 			return "redirect:./home";
 		} else if (a != null) {
-			model.addAttribute("utilisateur", daoAdmin.auth(login, password));
+			model.addAttribute("utilisateur", a);
 			System.out.println(j);
 			return "redirect:./home";
-		} else {
-
+		} else 	{
+			
+			result.rejectValue("login", "login.false", "Vos identifiants sont invalides connard de merde");
 			return "connexion";
 		}
 	}

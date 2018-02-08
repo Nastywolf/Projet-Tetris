@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -28,12 +29,11 @@ public class TetriminoModel implements Serializable{
 	private int id;
 	
 	@Column(name="TETRIMINO_NOM", columnDefinition="VARCHAR(45)")
-	//@NotEmpty
-	//@Size(max=50)
+	@NotEmpty(message="Veuillez renseigner le nom du tétromino")
+	@Size(max=25, message="Le nom ne doit pas dépasser 25 caractères")
 	private String nom;
 	
 	@Column(name = "TETRIMINO_COULEUR", columnDefinition = "VARCHAR(45)")
-	//@NotEmpty
 	//@Size(max=50)
 	//format RGB
 	private String couleur;

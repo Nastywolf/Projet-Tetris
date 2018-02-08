@@ -9,22 +9,24 @@
 	<tiles:putAttribute name="title" value="Connexion" />
 	<tiles:putAttribute name="content">
 
-		<form:form method="POST">
+		<form:form method="POST" modelAttribute="login">
 			<div class="form-group">
-				<label>Login :</label> <input type="text" class="form-control"
+				<label>Login :</label> <input  type="text" class="form-control"
 					name="login" aria-describedby="Help"
 					placeholder="Entrez votre pseudo" />
-				<form:errors element="div" cssClass="alert alert-danger" />
+				
 
 			</div>
 			<div class="form-group">
-				<label>Password :</label> <input type="password"
-					class="form-control" name="password" aria-describedby="Help"
+				<label >Password :</label> <input type="password"
+					class="form-control" name="mdp" aria-describedby="Help"
 					placeholder="Entrez votre Mot de passe" />
-				<form:errors element="div" cssClass="alert alert-danger" />
+				
 
 			</div>
-
+			<div>
+			<form:errors  path="login" element="div" cssClass="alert alert-danger" />
+			</div>
 			<button type="submit" class="btn btn-danger">Connexion</button>
 
 

@@ -15,8 +15,8 @@
 			</c:if>
 			<div class="form-group">
 				<label>Taille :</label>
-				<input type="number" class="form-control" name="taille"
-					aria-describedby="Help" placeholder="Veuillez entre une taille < 15" />
+				<input type="number" max="10" class="form-control" name="taille"
+					aria-describedby="Help" placeholder="Veuillez entre une taille < 10" />
 				<form:errors element="div" cssClass="alert alert-danger" />
 
 			</div>

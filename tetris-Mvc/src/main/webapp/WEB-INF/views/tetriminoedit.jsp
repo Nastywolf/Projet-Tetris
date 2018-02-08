@@ -18,7 +18,7 @@
 
 			<div class="form-group">
 				<form:label path="couleur">Couleur :</form:label>
-				<form:input path="couleur" type="color" class="form-control"
+				<form:input path="couleur" type="color" class="bfh-colorpicker"
 					name="couleur" aria-describedby="Help" placeholder="couleur"
 					value="${tetrimino.couleur}" />
 				<form:errors path="couleur" element="div"
